@@ -1,0 +1,401 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	
+}
+
+
+h1 {
+	font-family: 'Roboto Slab', serif;
+	position: absolute;
+	top: 20%;
+	left: 0;
+	right: 0;
+	font-size: 3rem;
+	z-index: 9;
+	width: fit-content;
+    margin: 0 auto;
+  color: white;
+  text-shadow: 2px 2px 4px #343a3d;
+}
+
+@media (min-width: 50rem) {
+	h1 {
+		font-size: 8rem;
+		top: 50%;
+		position: absolute;
+		z-index: 2;
+		left: 2rem;
+	}
+
+	
+}
+
+h2 {
+	width: fit-content;
+    margin: 0 auto;
+	font-size:	2rem;
+	padding: 1rem;
+	text-align: center;
+
+}
+p {
+	font-size: 1rem;
+	line-height: 3rem;
+}
+/* Elements
+--------------------------------------------- */
+ul {
+	
+}
+
+ol {
+	
+}
+
+dl {
+	
+}
+
+figure {
+	
+}
+
+table {
+	
+}
+
+/* Links
+--------------------------------------------- */
+a {
+	text-decoration: none;
+
+}
+
+a:visited {
+	text-decoration: none;
+	
+}
+
+a:hover {
+	text-decoration: underline;
+  	text-decoration-color: #A6756A;
+
+}
+
+a:focus {
+	text-decoration: underline;
+  	text-decoration-color: #A6756A;
+}
+
+a:active {
+	
+}
+
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+div {
+	display: block;
+}
+
+
+body {
+	margin: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+
+.navbar {
+	display: none;
+}
+nav {
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	right: 2rem;
+	margin: 2rem;
+}
+
+nav ul {
+
+}
+nav li {
+	display: inline-block;
+	padding: 2rem;
+}
+
+nav a {
+	text-decoration: none;
+	margin: 0;
+	color: #343a3d;
+	font-size: 1.5rem;
+	text-shadow: 2px 2px 4px white;
+}
+
+#logo {
+	position: absolute;
+	z-index: 2;
+	padding: 2rem;
+	width: 3rem;
+	height: 3rem;
+}
+@media (min-width:50rem) {
+	nav {
+		margin: 0;
+	}
+	nav a{
+		text-decoration: none;
+		/* margin: 0; */
+		padding: 1.5rem;
+	}
+	
+	.topnav {
+		display: none;
+	}
+
+	.navbar {
+		display: block;
+	}
+}
+
+/* Style the navigation menu */
+.topnav {
+	overflow: hidden;
+	background-color: #343a3d;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+	display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+	color: white;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+	background: #343a3d;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+	background-color: #ddd;
+	color: #343a3d;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+	background-color: #343a3d;
+	color: white;
+  }
+/* Main
+--------------------------------------------- */
+
+.video {
+	min-width: 100vw;
+	min-height: 100vh;
+	position: relative;
+}
+
+.video video {
+    min-width: 100%;
+    min-height: 100%;
+    height: 100vh;
+	object-fit: cover;
+	display: block;	
+}
+
+.mainphoto {
+	min-width: 100%;
+    height: 30vh;
+	display: block;
+	object-fit: cover;
+}
+
+@media (min-width: 30rem) {
+.mainphoto {
+	min-width: 100%;
+    height: 100vh;
+    object-fit: cover;
+	position: relative;
+	z-index: 0;
+	display: block;
+	background-size: cover;
+}
+}
+
+/* Nature */
+
+.nature {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.nature img {
+	width: 100%;
+}
+.nature article {
+margin: 3rem;
+}
+@media (min-width:70rem) {
+	
+
+.nature {
+display: grid;
+grid-template-columns: 30rem 30rem;
+justify-content: center;
+gap: 2rem;
+}
+
+
+.nature img {
+	object-fit: cover;
+	width: 30rem;
+	height: 40rem;
+
+}
+
+.nature p {
+	width: 25rem;
+}
+
+#lake {
+	grid-row: 3 /4;
+	grid-column: 1 /3 ;
+	height: 40rem;
+	width: 62rem;
+
+}
+}
+
+/* Culture */
+blockquote {
+	background-color: #BFBFB8;
+	border-radius: 15px;
+	width: 50%;
+	padding: 3rem;
+	font-size: 2rem;
+	margin: 5rem auto;
+}
+
+table {
+	margin: auto;
+	padding: 1rem;
+}
+tr, th, td {
+	border-bottom: 1px solid black;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+td {
+	padding: 2rem;
+}
+
+.gallery img{
+	width: 40rem;
+	height: 70rem;
+	object-fit: cover ;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+@media (min-width:70rem){
+
+ .gallery {
+display: grid;
+grid-template-columns: minmax(auto, 40rem) minmax(auto, 40rem);
+grid-template-rows: 1fr 1fr;
+justify-content: center;
+}
+}
+/* credits */
+
+#credit {
+	object-position: top;
+}
+
+.credit-content {
+	width: 70%;
+	margin: 0 auto;
+	padding: 1rem;
+}
+.credit-content p {
+	font-size: 1rem;
+}
+.target {
+	color:#A6756A;
+}
+
+/* Footer
+--------------------------------------------- */
+footer {
+	background-color: #343a3d;
+	color: #BFBFB8;
+	padding: 1rem;
+}
+
+footer p {
+	color: #BFBFB8;
+	text-align: center;
+	
+}
